@@ -229,7 +229,7 @@ console.log(nb1, nb2, nb3);
 
 Sebelum menjalankan kode diatas, cobalah untuk menebak nilai dari `nb1`, `nb2` dan `nb3` tergantung dari nilai awalnya.
 
-|Initial values       |`nb1` final value |`nb2` final value|`nb3` final value|
+|Nilai awal|Nilai akhir `nb1`|Nilai akhir `nb2`|Nilai akhir `nb3`|
 |---------------------|------------------|-----------------|-----------------|
 |`nb1=nb2=nb3=4`      |                  |                 |                 |
 |`nb1=4,nb2=3,nb3=2`  |                  |                 |                 |
