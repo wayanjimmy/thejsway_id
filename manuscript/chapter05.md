@@ -66,3 +66,20 @@ function menyapa(nama) {
 console.log(menyapa('Satya')); // Halo Satya
 console.log(menyapa('Angga')); // Halo Angga
 ```
+
+Deklarasi fungsi `menyapa` kini terdapat parameter `nama`.
+
+Dalam contoh ini pemanggilan pertama fungsi `menyapa` dilakukan dengan argument `Satya`, dan yang kedua `Angga`. Pada pemanggilan pertama parameternya adalah `Satya` sedangkan kedua `Angga`.
+
+Berikut contoh syntax deklarasi fungsi dengan lebih dari 1 parameter, banyaknya parameter tidak dibatasi namun fungsi dengan parameter lebih dari 3 atau 4 jarang ditemukan.
+
+```js
+// Deklarasi fungsiSaya dengan beberapa parameter
+function fungsiSaya(param1, param2, ...) {
+  // Gunakan param1, param2, ... disini
+}
+
+// Pemanggilan fungsi
+// nilai param1 diiisi dengan arg1, param2 diisi arg2, ...
+fungsiSaya(arg1, arg2, ...);
+```
