@@ -36,17 +36,37 @@ Ini adalah sebuah contoh fungsi.
 
 ```js
 function menyapa() {
-    console.log('Halo');
+  console.log("Halo");
 }
 
-console.log('Program dimulai');
+console.log("Program dimulai");
 menyapa();
-console.log('Program selesai');
+console.log("Program selesai");
 ```
 
 ### Deklarasi fungsi
 
 ### Memanggil fungsi
+
+Fungsi harus dipanggil untuk dijalankan. Berikut adalah bagian kedua dari contoh program.
+
+```js
+console.log("Program dimulai");
+menyapa();
+console.log("Program selesai");
+```
+
+Baris pertama dan terakhir menampilkan pesan di layar. Baris kedua melakukan pemanggilan fungsi `menyapa()`.
+
+Anda dapat memanggil fungsi dengan menuliskan nama fungsi diikuti sepasang tanda kurung.
+
+```js
+// ...
+sebuahFungsi(); // Memanggil fungsi bernama sebuahFungsi
+// ...
+```
+
+![Mekanisme pemanggilan fungsi](images/chapter05-02.png)
 
 ### Manfaat menggunakan fungsi
 
@@ -54,17 +74,83 @@ Masalah yang kompleks umumnya lebih mudah ditangani ketika dipecah menjadi beber
 
 Membuat fungsi juga bisa menjadi solusi untuk masalah duplikasi kode, Daripada kode diduplikasi di beberapa tempat, sepotong kode yang dijadikan fungsi dapat dipanggil dari mana saja ketika diperlukan.
 
+## Isi Fungsi
+
+### Nilai kembali
+
+Berikut adalah variasi dari program diatas.
+
+```js
+function menyapa() {
+  return 'Halo';
+}
+
+console.log("Program dimulai");
+const pesan = menyapa();  // Simpan nilai kembali dari fungsi di sebuah variabel 
+console.log(pesan); // Tampilkan nilai kembali
+console.log("Program selesai");
+```
+
+Jalankan kode diatas dan hasilnya akan sama saja.
+
+Dalam contoh ini isi dari fungsi `menyapa` berbeda yang awalnya menggunakan `console.log('Halo');` diubah menjadi `return 'Halo';`.
+
+Kata kunci `return` digunakan agar fungsi mengirim nilai kembali. Nilai kembali yang dikirim diletakan disetelah kata `return`.
+
+```js
+// Deklarasi sebuahFungsi
+function sebuahFungsi() {
+  let nilaiKembali;
+  // Kalkulasi nilai kembali
+  // nilaiKembali = ...
+  return nilaiKembali;
+}
+
+// Mendapatkan nilai kembali dari memanggil sebuahFungsi
+const hasil = sebuahFungsi();
+// ...
+```
+
+Nilai kembali bisa bernilai apa saja (number, string, dll). Namun sebuah fungsi hanya bisa mengembalikan 1 nilai.
+
+Jika Anda mencoba mengambil nilai kembali dari fungsi yang tidak mengembalikan nilai, makanya nilai yang didapat adalah `undefined`
+
+```js
+function fungsiSaya() {
+  // ...
+  // Tidak ada nilai kembali
+}
+
+const hasil = fungsiSaya();
+console.log(hasil); // undefined
+```
+
+> Sebuah fungsi berhenti setelah statement return di eksekusi, baris kode dibawah return tidak akan dieksekusi
+
+### Variabel lokal
+
+Anda dapet mendeklarasi variabel dalam fungsi
+
+```js
+function menyapa() {
+  const pesan = "Halo!";
+  return pesan;
+}
+
+console.log(menyapa()); // "Halo!"
+```
+
 ### Passing Parameter
 
 **Parameter** adalah informasi yang diperlukan oleh sebuah fungsi untuk bekerja. Parameter didefinisikan di antara tanda kurung `(...)` setelah nama fungsi. Parameter itu kemudian dapat digunakan didalam fungsi.
 
 ```js
 function menyapa(nama) {
-    console.log(`Halo ${nama}`);
+  console.log(`Halo ${nama}`);
 }
 
-console.log(menyapa('Satya')); // Halo Satya
-console.log(menyapa('Angga')); // Halo Angga
+console.log(menyapa("Satya")); // Halo Satya
+console.log(menyapa("Angga")); // Halo Angga
 ```
 
 Deklarasi fungsi `menyapa` kini terdapat parameter `nama`.
