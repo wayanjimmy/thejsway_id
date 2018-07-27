@@ -140,6 +140,22 @@ function menyapa() {
 console.log(menyapa()); // "Halo!"
 ```
 
+Fungsi `menyapa()` mendeklarasikan variabel bernama `pesan` dan mengembalikan nilainya dengan `return`.
+
+Variabel yang berada didalam fungsi dinamakan variabel lokal, karena scope variabel tersebut hanya didalam fungsi. Diluar fungsi Anda tidak dapat mengaksesnya.
+
+```js
+function menyapa() {
+  const pesan = "Halo!";
+  return pesan;
+}
+
+console.log(menyapa()); // "Halo!"
+console.log(pesan); // Error
+```
+
+Tidak dapat menggunakan variabel lokal diluar fungsi bukanlah hal yang buruk, justru hal yang bagus. Ini akan mencegah konflik penamaan, dan memungkinkan menggunakan nama variabel yang sama di fungsi yang berbeda.
+
 ### Passing Parameter
 
 **Parameter** adalah informasi yang diperlukan oleh sebuah fungsi untuk bekerja. Parameter didefinisikan di antara tanda kurung `(...)` setelah nama fungsi. Parameter itu kemudian dapat digunakan didalam fungsi.
