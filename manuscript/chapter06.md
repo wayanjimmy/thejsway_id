@@ -215,9 +215,9 @@ console.log(describe(aurora));
 
 ![Hasil eksekusi](images/chapter06-07.png)
 
-The `describe()` function takes an object as a parameter. It accesses that object's properties to create a description string.
+Fungsi `describe()` mengambil sebuah object sebagai parameter. Ia mengakses property object untuk membuat string deskripsi.
 
-Below is an alternative approach, using a `describe()` property *inside* the object.
+Di bawah ini adalah pendekatan alternatif, menggunakan property `describe()` di dalam object.
 
 ```js
 const aurora = {
