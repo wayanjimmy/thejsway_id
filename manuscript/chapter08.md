@@ -19,3 +19,33 @@
 * Melakukan pencarian didalam string dapat menggunakan method `indexOf()`, `startsWith()` dan `endsWith()`.
 
 * Method `split()` dapat digunakan untuk memecah string berdasarkan sebuah karakter pemisah. 
+
+## Pengenalan String 
+
+Mari ulas lagi apa yang telah dipelajari tentang String:
+
+* Nilai string merepresentasikan teks.
+
+* Di javascript, string didefinisikan dalam teks yang diapit oleh kutip satu (`'Saya string'`) atau kutip dua (`"Saya string"`).
+
+* Karakter khusus dalam string diawali dengan (`\`) diikuti dengan karakter khusus tersebut. Contoh `\n` adalah karakter khusus untuk menambahkan baris baru.
+
+* Operator tambah `+` digunakan untuk menggabungkan dua atau lebih string.
+
+## Mendapatkan panjang string
+
+Untuk mendapatkan panjang sebuah string, tinggal menambahkan `.length`. Panjang string akan dikembalikan dalam bentuk bilangan bulat.
+
+```js
+console.log("ABC".length); // 3
+const str = "Saya string";
+const len = str.length;
+console.log(len); // 11
+```
+
+Walaupun string termasuk dalam tipedata primitif, beberapa properti dan method dapat diaplikasikan seperti halnya object, salah satunya adalah properti `.length`.
+
+## Mengubah case string
+
+Untuk mengubah string menjadi huruf kecil dapat digunakan method `toLowerCase()`, sedangkan `toUpperCase()` digunakan untuk mengubah jadi huruf besar.
+
