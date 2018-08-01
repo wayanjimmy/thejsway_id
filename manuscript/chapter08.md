@@ -49,3 +49,43 @@ Walaupun string termasuk dalam tipedata primitif, beberapa properti dan method d
 
 Untuk mengubah string menjadi huruf kecil dapat digunakan method `toLowerCase()`, sedangkan `toUpperCase()` digunakan untuk mengubah jadi huruf besar.
 
+```js
+const kata = "Bora-bora";
+
+const kataDalamHurufKecil = kata.toLowerCase();
+console.log(kataDalamHurufKecil); // "bora-bora"
+
+const kataDalamHurufBesar = kata.toUpperCase();
+console.log(kataDalamHurufBesar); // "BORA-BORA"
+```
+
+`toLowerCase()` dan `toUpperCase()` adalah method string. Seperti setiap method keduanya tidak mengubah nilai awal dan akan mengembalikan nilai yang baru. 
+
+T> Penting untuk diketahui bahwa ketika sebuah string dibuat nilainya tidak akan berubah. String dalam javascript adalah **immutable**.
+
+## Membandingkan nilai string
+
+Untuk membandingkan string dapat digunakan operator `===`. Operasi pembandingan akan mengembalikan nilai boolean `true` jika string sama dan `false` jika tidak sama.
+
+```js
+const kata = "koala";
+console.log(kata === "koala"); // true
+console.log(kata === "jerapah"); // false
+```
+
+W> Pembandingan string adalah case sensitive. Artinya nilai huruf kecil dan huruf besar dianggap berbeda.
+
+```js
+console.log("Qwerty" === "qwerty"); // false
+console.log("Qwerty".toLowerCase() === "qwerty"); // true
+```
+
+## String adalah kumpulan beberapa karakter
+
+### Mengidentifikasi sebuah karakter
+
+Anda dapat membayangkan string sebagai sebuah array dari karakter. Setiap karakter dapat diakses melalui index, seperti halnya array, dengan ketentuan sebagai berikut.
+
+* Index yang pertama adalah 0, bukan 1.
+* Index karakter yang terakhir adalah panjang string - 1;
+
