@@ -89,3 +89,50 @@ Anda dapat membayangkan string sebagai sebuah array dari karakter. Setiap karakt
 * Index yang pertama adalah 0, bukan 1.
 * Index karakter yang terakhir adalah panjang string - 1;
 
+## Mengakses karakter dalam string
+
+Untuk mengakses karakter dalam string dapat digunakan tanda kurung siku `[]` dengan index yang ditempatkan diantara keduanya.
+
+W> Jika mencoba mengakses karakter yang diluar panjang string maka nilai `undefined` yang akan didapatkan.
+
+```js
+const olahraga = "bola basket";
+console.log(olahraga[0]); // "o"
+console.log(olahraga[6]); // "a"
+console.log(olahraga[20]); // undefined: karakter terakhir berada pada index 10
+```
+
+## Perulangan pada string
+
+Bagaimana jika Anda ingin mengakses semua karakter dalam string satu per satu ? Anda dapat mengakses masing-masing karakter seperti cara dibawah.
+
+```js
+const nama = "Sarah";
+console.log(name[0]); // "S"
+console.log(name[1]); // "a"
+console.log(name[2]); // "r"
+console.log(name[3]); // "a"
+console.log(name[4]); // "h"
+```
+
+Namun cara diatas kurang praktis. Anda perlu solusi yang lebih baik dengan melakukan perulangan dalam mengakses masing-masing karakter. Konsep perulangan dapat kita terapkan untuk masalah ini.
+
+Anda dapat menggunakan perulangan untuk mengakses masing-masing karakter dalam string. `for` adalah pilihan yang lebih baik dari `while`, karena kita sudah mengetahui berapa banyak karakter dalam string.
+
+```js
+for (let i = 0; i < sebuahString.length; i++) {
+  // Gunakan sebuahString[i] untuk mengakses karakter dalam string satu per satu
+}
+```
+
+Dalam perulangan diatas `i` adalah indikator yang menunjukan index karakter yang sedang diakses. Ketika nilai `i` bernilai sama dengan panjang string dikurangi 1 maka perulangan akan terhenti.
+
+Kode dibawah akan menghasilkan output yang sama dengan contoh sebelumnya.
+
+```js
+const nama = "Sarah";
+for (let i = 0; i < nama.length; i++) {
+  console.log(nama[i]);
+}
+```
+
