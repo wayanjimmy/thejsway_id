@@ -173,3 +173,26 @@ console.log(song.endsWith("men")); // true
 console.log(song.endsWith("Men")); // false
 console.log(song.endsWith("Tonk")); // false
 ```
+
+## Memecah string
+
+Kadang string terdiri dari beberapa bagian yangn dipisahkan oleh sebuah karakter tertentu. Pada kasus ini untuk mendapatkan masing-masing bagian dapat menggunakan method `split()`. Method ini mengambil parameter berupa karakter pemisah dan mengembalikan array yang terdiiri dari bagian-bagiannya.
+
+```js
+const semuaBulan = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+const bulan = semuaBulan.split(",");
+console.log(bulan[0]);  // "Jan"
+console.log(bulan[11]); // "Dec"
+```
+
+## Waktunya Koding
+
+### Info kata
+
+Tulislah sebuah program yang meminta input kata dan menunjukan panjangnya, dalam huruf kecil dan besar.
+
+### Palindrome
+
+Tingkatkat program sebelumnya untuk melakukan pengecekan apakah kata tersebut palindrome atau bukan. Palindrome adalah kata yang jika dibalik akan tetap sama. Abaikan tanda, huruf kecil/besar dan spasi.
+
+> Sebagai contoh `"radar"` adalah palindrome begitu juga dengan `"Radar"`
