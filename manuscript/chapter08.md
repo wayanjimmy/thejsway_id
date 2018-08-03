@@ -136,3 +136,40 @@ for (let i = 0; i < nama.length; i++) {
 }
 ```
 
+## Mengubah string menjadi array
+
+Di javascript method `Array.from()` dapat digunakan untuk mengubah string menjadi array. Array tersebut kemudian dapat diproses lagi menggunakan method `forEach()`. Seperti contoh sebelumnya kode dibawah menampilkan karakter dari sebuah string satu per satu.
+
+```js
+const nama = "Sarah";
+const namaArray = Array.from(nama);
+namaArray.forEach(huruf => {
+  console.log(huruf);
+});
+```
+
+## Pencarian dalam string
+
+Melakukan pencarian dalam sebuah string adalah hal yang lumrah.
+
+Method `indexOf()` memerlukan sebuah parameter yang berisikan nilai yang dicari. Jika nilai tersebut ditemukan akan mengembalikan index pertama dimana nilai tersebut ditemukan, sebaliknya akan mengembalikan nilai -1 jika tidak ditemukan.
+
+```js
+const lagu = "Hongky Tonk Women";
+console.log(song.indexOf("onk")); // 1
+console.log(song.indexOf("Onk")); // -1 karena tidak ditemukan
+```
+
+Saat mencari nilai yang ada di awal atau akhir string dapat digunakan method `startsWith()` dan `endsWith()`. Kedua method tersebut mengembalikan nilai `true` atau `false`, tergantung dari nilai tersebut ditemukan atau tidak. Perlu diperhatikan method ini case sensitive.
+
+```js
+const song = "Honky Tonk Women";
+
+console.log(song.startsWith("Honk")); // true
+console.log(song.startsWith("honk")); // false
+console.log(song.startsWith("Tonk")); // false
+
+console.log(song.endsWith("men")); // true
+console.log(song.endsWith("Men")); // false
+console.log(song.endsWith("Tonk")); // false
+```
