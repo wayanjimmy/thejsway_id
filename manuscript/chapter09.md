@@ -74,3 +74,55 @@ aurora.xp += 15;
 
 console.log(aurora.describe());
 ```
+
+Untuk membuat permainan menjadi lebih menarik kita akan menambah sebuah karakter. Muncullah karakter Glacius, pengikut dari Aurora.
+
+```js
+const glacius = {
+  name: "Glacius",
+  health: 130,
+  strength: 30,
+  xp: 0,
+
+  // Mengembalikan deskripsi karakter
+  describe() {
+    return `${this.name} memiliki ${this.health} health point, kekuatan ${this.strength} dan pengalaman ${this.xp}`;
+  }
+};
+```
+
+Kedua karakter tersebut memiliki kesamaan. Properti yang digunakan sama hanya nilainya saja yang berbeda.
+
+Anda harus mengetahui bahwa duplikasi kode lebih baik untuk dihindari. Jadi kita harus mencari cara agar kedua objek tersebut bisa saling berbagi properti yang sama.
+
+## Class di Javascript
+
+Sebagian besar bahasa pemrograman yang mendukung orientasi objek menggunakan class sebagai **abstraksi** yang akan dimanipulasi oleh program. Class digunakan untuk membuat objek dan merepresentasikan konsep. Hal ini menawarkan syntax yang nyaman ketika memberikan **data** dan **kelakuan** pada objek tersebut.
+
+Bukan pengecualian untuk Javascript yang mana javascript memberikan dukungan pemrograman menggunakan class (Namun dengan sedikit keanehan, akan dijelaskan nanti).
+
+### Membuat Class
+
+Contoh kode RPG diatas berurusan dengan karakter, jadi mari membuat sebuah class `Character` yang akan digunakan untuk menekspresikan apa itu sebuah karakter.
+
+```js
+class Character {
+  constructor(name, health, strength) {
+    this.name = name;
+    this.health = health;
+    this.strength = strength;
+  }
+
+  // Mengembalikan deskripsi karakter
+  describe() {
+    return `${this.name} memiliki ${this.health} health point, kekuatan ${this.strength} dan pengalaman ${this.xp}`;
+  }
+}
+```
+
+Contoh ini mendemonstrasikan beberapa fakta tentang class di javascript:
+
+* Class dibuat dengan kata kunci `class` diikuti dengan nama class (biasanya diawali dengan huruf besar).
+* Class hanya bisa berisikan **method**, bukan properti data.
+* Seperti object literal, kata kunci `this` merujuk pada objek dimana method tersebut dipanggil
+* Method khusus `constructor()` dapat ditambahkan ke definisi sebuah class. Akan dipanggil ketika objek tersebut dibuat dan biasanya digunakan untuk memberikan properti data.
