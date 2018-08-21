@@ -126,3 +126,54 @@ Contoh ini mendemonstrasikan beberapa fakta tentang class di javascript:
 * Class hanya bisa berisikan **method**, bukan properti data.
 * Seperti object literal, kata kunci `this` merujuk pada objek dimana method tersebut dipanggil
 * Method khusus `constructor()` dapat ditambahkan ke definisi sebuah class. Akan dipanggil ketika objek tersebut dibuat dan biasanya digunakan untuk memberikan properti data.
+
+### Menggunakan Class
+
+Setelah class didefinisikan, Anda dapat membuat objek. Perhatikan program berikut ini.
+
+```js
+const auroroa = new Character("Aurora", 150, 25);
+const glacious = new Character("Glacius", 130, 30);
+
+// Aurora diserang dengan panah
+aurora.health -= 20;
+
+// Aurora mendapatkan kekuatan dari kalung
+aurora.strength += 10;
+
+// Aurora mempelajari keahlian baru
+aurora.xp += 15;
+
+console.log(aurora.describe()):
+console.log(glacius.describe()):
+```
+
+![Execution result](images/chapter09-01.png)
+
+Objek `aurora` dan `glacius` dibuat sebagai character dengan operator `new`. Pernyataan ini akan memanggil constructor dari class dan menginisialisasi sebuah objek. Setelah objek dibuat, objek memiliki akses untuk property yang ada didalamnya.
+
+Berikut adalah syntax pembuatan objek dengan class.
+
+```js
+class MyClass {
+  constructor(param1, param2, ...) {
+    this.property1 = param1;
+    this.property2 = param2;
+    // ...
+  }
+
+  method(/* ... */) {
+    // ...
+  }
+
+  method2(/* ... */) {
+    // ...
+  }
+
+  // ...
+}
+
+const myObject = new MyClass(arg1, arg2, ...);
+myObject.method1(/* ... */);
+// ...
+```
