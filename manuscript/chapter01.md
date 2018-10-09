@@ -1,15 +1,33 @@
-# Memulai Koding
+# 3, 2, 1... Koding!
+
+Ayo mulai!, Bab ini akan memperkenalkanmu dasar dari pemrograman yang terdiri dari *value*, jenis data dan struktur program.
+
+## Rangkuman
+
+* Perintah Javascript `console.log()` menampilkan pesan dalam **console** yang merupakan wilayah informasi yang tersedia di lingkungan Javascript.
+
+* *Value* adalah potongan informasi. Jenis dari *value* tersebut mendefinisikan peranan dan operasi yang dapat dilakukan terhadapnya.
+
+* Bahasa Javascript menggunakan jenis data **number** untuk menyimpan *value* numerik (dengan dan tanpa desimal) dan **string** untuk menyimpan teks.
+
+* *Value* string di apit di antara sepasang tanda kutip tunggal (`'...'`) atau sepasang tanda kutip ganda (`"..."`).
+
+* Operasi aritmatik antara angka dapat dilakukan dengan tanda `+`, `-`, `*` dan `/`. Jika digunakan pada jenis data **string** maka akan digabungkan. Operasi ini disebut dengan **concatenation**.
+
+* Sebuah program komputer terdiri atas beberapa baris kode yang dibaca secara berurutan saat proses eksekusi.
+
+* Komentar (`// ...` atau `/* ... */`) adalah bagian kode yang tidak dieksekusi. Berguna untuk dokumentasi.
 
 ## Program Pertama
 Ini adalah program pertama kita.
 ```js
-console.log("Halo DevC Bali!");
+console.log("Halo dari Javascript!");
 ```
 
-## Value dan Tipedata
+## Value dan Jenis data
 Sebuah **value** adalah potongan informasi yang disimpan dalam program. Setiap value disimpan dalam bentuk yang berbeda disebut Tipedata. Tipedata-lah yang menentukan nilai yang bisa disimpan dalam **value** dan operasi yang bisa dilakukan terhadap **value** tersebut.
 
-Setiap bahasa pemrograman memiliki **value** dan tipedata masing-masing. Berikut adalah tipedata dalam Javascript
+Setiap bahasa pemrograman memiliki **value** dan tipedata masing-masing. Berikut adalah tipedata dalam Javascript.
 
 ### Number
 Number adalah numerikal **value**, Seperti dalam matematika Anda dapat menggunakan bilangan bulat (0, 1, 2, 3, ...) atau bilangan desimal untuk akurasi yang lebih baik.
@@ -30,7 +48,7 @@ Anda juga dapat mendefinisikan string dengan tanda kutip satu, misal, `'Ini sebu
 
 > Ingatlah selalu menutup string dengan tanda yang Anda gunakan untuk memulai string tersebut.
 
-Anda tidak dapat menambah dan mengurangi string seperti yang dapat dilakukan pada tipedata Number. Namun dengan menggunakan operator `+` diantara 2 String akan menggabungkan value kedua string tersebut. Misal, `"Java" + "script"` akan menghasilkan `"Javascript"`
+Anda tidak dapat menambah dan mengurangi string seperti yang dapat dilakukan pada tipedata Number. Namun dengan menggunakan operator `+` diantara 2 String akan menggabungkan value kedua string tersebut. Misal, `"Java" + "script"` akan menghasilkan `"Javascript"`.
 
 
 ## Struktur Program
