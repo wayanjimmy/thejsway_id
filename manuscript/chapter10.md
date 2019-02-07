@@ -22,7 +22,7 @@ Pemrograman berorientasi obyek, meskipun cukup populer, bukan satu-satunya cara 
 
 Pada bab ini, di mulai dengan contoh program dan memperbaikinya sedikit demi sedikit, tanpa menambahkan fungsi baru apa pun. Tugas pemrograman penting ini disebut refactoring.
 
-Program awal ini adalah tentang film Batman terbaru. Data tersebut datang dalam bentuk array objek, engan masing-masing objek menggambarkan film.
+Program awal ini adalah tentang film Batman terbaru. Data tersebut datang dalam bentuk array objek, dengan masing-masing objek menggambarkan film.
 
 ```js
 const daftarFilm = [
